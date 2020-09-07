@@ -30,10 +30,9 @@ namespace PingPongEvent
         {
             if (_break > 0)
             {
-                cmd.Text = message;
+                cmd.Text += message;
                 _break--;
                 _p2.Pong();
-                
             }
 
         }
@@ -42,20 +41,16 @@ namespace PingPongEvent
         {
             if (_break > 0)
             {
-                cmd.Text = message;
+                cmd.Text += message;
                 _break--;
                 _p1.Ping();
-               
             }
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
             if (_break > 0)
-            {
-                _break--;
-                _p1.Ping();
-            }
+                _p1.Ping(); 
         }
     }
 }
