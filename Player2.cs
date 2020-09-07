@@ -13,7 +13,7 @@ namespace PingPongEvent
 
         public void Pong()
         {
-            PongEvent?.Invoke("Pong recived ping\n");
+            PongEvent?.Invoke("Pong recived Ping\n");
         }
     }
 }
